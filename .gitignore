@@ -2,3 +2,5 @@ tags.csv
 links.csv
 ratings.csv
 movies.csv
+.sonarlint
+.vscode
