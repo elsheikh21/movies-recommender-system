@@ -41,46 +41,6 @@ ratings_df = ratings_df.drop('timestamp', 1)
 # Show the cleaned ratings data-frame
 print(ratings_df.head())
 
-'''
-Collaborative Filtering, which is also known as User-User Filtering.
-As hinted by its alternate name, this technique uses other users to recommend
-items to the input user.
-It attempts to find users that have similar preferences and opinions as
-the input and then recommends items that they have liked to the input.
-There are several methods of finding similar users (Even some making use of ML),
-and the one we will be using here is going to be based on the
-Pearson Correlation Function.
-
-
-Pearson Correlation Coefficient. It is used to measure
-the strength of a linear association between two variables.
-The formula for finding this coefficient between sets X and Y 
-with N values.
-
-Why Pearson Correlation?
-
-Pearson correlation is invariant to scaling,
-i.e. multiplying all elements by a nonzero constant or
-adding any constant to all elements.
-For example, if you have two vectors X and Y,then,
-pearson(X, Y) == pearson(X, 2 * Y + 3).
-This is a pretty important property in recommendation systems because
-for example two users might rate two series of items totally different in
-terms of absolute rates,
-but they would be similar users (i.e. with similar ideas)
-with similar rates in various scales .
-
-
-
-The process for creating a User Based recommendation system is as follows:
-
-1. Select a user with the movies the user has watched
-2. Based on his rating to movies, find the top X neighbors
-3. Get the watched movie record of the user for each neighbor.
-4. Calculate a similarity score using some formula
-5. Recommend the items with the highest score
-'''
-
 # begin by creating an input user to recommend movies to:
 userInput = [
     {'title': 'Breakfast Club, The', 'rating': 5},
@@ -91,7 +51,6 @@ userInput = [
 ]
 inputMovies = pd.DataFrame(userInput)
 print(inputMovies)
-
 
 # Add movieId to input user
 
